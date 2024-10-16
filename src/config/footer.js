@@ -1,6 +1,6 @@
 export const footerSocials = [
   {
-    name: 'Twitter',
+    name: 'X',
     url: 'https://twitter.com/jaydanurwin',
     icon: "mdi:twitter",
   },
