@@ -1,0 +1,34 @@
+---
+import { TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+
+const seo = {
+  title: `Preview | The Morning After Retirement`,
+  description: `This is a preview of some pages from the graphic novel.`,
+};
+---
+
+<Layout seo={seo}>
+  <TextSection narrow>
+    <h1>Preview</h1>
+
+    <p>Here's a sample of what you'll see when you download *The Morning After Retirement*.</p>
+
+    <!-- Carousel -->
+    <div class="carousel" id="image-carousel">
+      <div class="carousel-slide">
+        <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 1" />
+      </div>
+      <div class="carousel-slide">
+        <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 2" />
+      </div>
+      <div class="carousel-slide">
+        <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 3" />
+      </div>
+      
+      <button class="carousel-control-prev">Previous</button>
+      <button class="carousel-control-next">Next</button>
+    </div>
+  </TextSection>
+</Layout>
+
