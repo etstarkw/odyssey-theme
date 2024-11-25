@@ -1,28 +1,35 @@
 ---
 import { TextSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
+import "webcoreui/dist/webcoreui.min.css";
 
 const seo = {
-  title: `Legal Page | Astro Odyssey Theme`,
-  description: `This is the legal page template. It is a great starter for your company's Terms of Service, Terms & Conditions, Privacy Policy, etc.`,
+  title: `Preview | The Morning After Retirement`,
+  description: `This is a preview of some pages from the graphic novel.`,
 };
 ---
 
 <Layout seo={seo}>
   <TextSection narrow>
-    <h1>Legal Page</h1>
+    <h1>Preview</h1>
 
-    <p>This is the legal page template. It is a great starter for your company's Terms of Service, Terms & Conditions,
-      Privacy Policy, etc.</p>
+    <p>Here's a sample of what you'll see when you download *The Morning After Retirement*.</p>
 
-    <h2>Terms of Service</h2>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, obcaecati. Aspernatur facilis molestias
-      vitae. Aliquid debitis eum quis repudiandae pariatur possimus provident accusantium reiciendis nemo, culpa labore
-      laborum, dolorum ea.</p>
-
-    <p>Corrupti impedit perferendis, libero in, voluptates quod ratione repudiandae veniam sapiente necessitatibus, eius
-      illo. Impedit quibusdam esse saepe placeat incidunt voluptatibus soluta dolore blanditiis ad provident animi
-      illum, est adipisci?</p>
+    <!-- Carousel -->
+    <div class="carousel" id="image-carousel">
+      <div class="carousel-slide">
+        <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 1" />
+      </div>
+      <div class="carousel-slide">
+        <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 2" />
+      </div>
+      <div class="carousel-slide">
+        <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 3" />
+      </div>
+      
+      <button class="carousel-control-prev">Previous</button>
+      <button class="carousel-control-next">Next</button>
+    </div>
   </TextSection>
 </Layout>
+
