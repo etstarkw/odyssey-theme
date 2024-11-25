@@ -27,6 +27,7 @@
 		"prettier-plugin-astro": "^0.0.12"
 	},
 	"dependencies": {
+		"sass": "^1.81.0",
 		"webcoreui": "^0.8.1"
 	}
 }
