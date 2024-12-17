@@ -1,28 +1,48 @@
 ---
 import { TextSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
+import { Carousel } from 'webcoreui/astro'; // Import Carousel component
+import "webcoreui/styles"; // Import WebCoreUI styles globally
 
 const seo = {
-  title: `Legal Page | Astro Odyssey Theme`,
-  description: `This is the legal page template. It is a great starter for your company's Terms of Service, Terms & Conditions, Privacy Policy, etc.`,
+  title: `Preview | The Morning After Retirement`,
+  description: `This is a preview of some pages from the graphic novel.`,
 };
 ---
 
 <Layout seo={seo}>
   <TextSection narrow>
-    <h1>Legal Page</h1>
+    <h1>Preview</h1>
+    <p>Here's a sample of what you'll see when you download <em>The Morning After Retirement</em>.</p>
 
-    <p>This is the legal page template. It is a great starter for your company's Terms of Service, Terms & Conditions,
-      Privacy Policy, etc.</p>
-
-    <h2>Terms of Service</h2>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, obcaecati. Aspernatur facilis molestias
-      vitae. Aliquid debitis eum quis repudiandae pariatur possimus provident accusantium reiciendis nemo, culpa labore
-      laborum, dolorum ea.</p>
-
-    <p>Corrupti impedit perferendis, libero in, voluptates quod ratione repudiandae veniam sapiente necessitatibus, eius
-      illo. Impedit quibusdam esse saepe placeat incidunt voluptatibus soluta dolore blanditiis ad provident animi
-      illum, est adipisci?</p>
+    <!-- WebCoreUI Carousel -->
+    <Carousel items={4}pagination={{
+      type: null,
+      pages: [
+          { label: 1, active: true },
+          { label: 2 },
+          { label: 3 },
+          { label: 4 }
+      ]
+  }}>
+      <li class="slide">
+        <img src="/preview-1.jpg" alt="Preview Page 1" style="width: 100%;" />
+      </li>
+      <li class="slide">
+        <img src="/preview-2.jpg" alt="Preview Page 2" style="width: 100%;" />
+      </li>
+      <li class="slide">
+        <img src="/preview-3.jpg" alt="Preview Page 3" style="width: 100%;" />
+      </li>
+      <li class="slide">
+        <img src="/preview-4.jpg" alt="Preview Page 3" style="width: 100%;" />
+      </li>
+    </Carousel>
   </TextSection>
 </Layout>
+
+<style>
+  .slide {
+    width: 100%;
+  }
+</style>
