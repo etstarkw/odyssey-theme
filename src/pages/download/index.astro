@@ -1,0 +1,38 @@
+---
+import { TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+
+const seo = {
+  title: `Download | The Morning After Retirement`,
+  description: `This is where the pdf of The Morning After Retirement Graphic Novel is available.`,
+};
+
+const pdfPath = '/graphic-novel.pdf'; // Path to your PDF in the public folder
+const previewImage = '/social.png'; // Path to the preview image in the public folder
+---
+
+<Layout seo={seo}>
+  <TextSection narrow>
+    <h1>Download "The Morning After Retirement"</h1>
+
+    <p>
+      Download the full PDF of the graphic novel to read offline.
+    </p>
+
+    <!-- Preview Image -->
+    <img 
+      src={previewImage} 
+      alt="Preview of The Morning After Retirement" 
+      style="max-width: 100%; height: auto; margin-bottom: 1.5rem; border: 1px solid #ddd; border-radius: 8px;"
+    />
+
+    <!-- Download Link -->
+    <a 
+      href={pdfPath} 
+      download="the-morning-after-retirement.pdf" 
+      style="display: inline-block; background-color: #0070f3; color: white; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: bold; text-decoration: none; border-radius: 8px; text-align: center;"
+    >
+      Download PDF
+    </a>
+  </TextSection>
+</Layout>
