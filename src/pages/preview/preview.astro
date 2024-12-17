@@ -1,8 +1,8 @@
 ---
 import { TextSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
-import "webcoreui/styles"; // Import WebCoreUI SCSS
-
+import { Carousel } from 'webcoreui/astro'; // Import Carousel component
+import "webcoreui/styles"; // Import WebCoreUI styles globally
 
 const seo = {
   title: `Preview | The Morning After Retirement`,
@@ -16,21 +16,26 @@ const seo = {
     <p>Here's a sample of what you'll see when you download <em>The Morning After Retirement</em>.</p>
 
     <!-- WebCoreUI Carousel -->
-    <div class="carousel" data-carousel>
-      <div class="carousel-slides">
-        <div class="carousel-slide">
-          <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 1" />
-        </div>
-        <div class="carousel-slide">
-          <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 2" />
-        </div>
-        <div class="carousel-slide">
-          <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 3" />
-        </div>
-      </div>
-    </div>
+    <Carousel items={3}>
+      <li class="slide">
+        <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 1" style="width: 100%;" />
+      </li>
+      <li class="slide">
+        <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 2" style="width: 100%;" />
+      </li>
+      <li class="slide">
+        <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 3" style="width: 100%;" />
+      </li>
+    </Carousel>
   </TextSection>
 </Layout>
+
+<style>
+  .slide {
+    width: 100%;
+  }
+</style>
+
 
 
 
