@@ -1,6 +1,7 @@
 ---
 import { TextSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
+import "webcoreui/scss"; // Import WebCoreUI SCSS
 
 const seo = {
   title: `Preview | The Morning After Retirement`,
@@ -11,24 +12,24 @@ const seo = {
 <Layout seo={seo}>
   <TextSection narrow>
     <h1>Preview</h1>
+    <p>Here's a sample of what you'll see when you download <em>The Morning After Retirement</em>.</p>
 
-    <p>Here's a sample of what you'll see when you download *The Morning After Retirement*.</p>
-
-    <!-- Carousel -->
-    <div class="carousel" id="image-carousel">
-      <div class="carousel-slide">
-        <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 1" />
+    <!-- WebCoreUI Carousel -->
+    <div class="carousel" data-carousel>
+      <div class="carousel-slides">
+        <div class="carousel-slide">
+          <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 1" />
+        </div>
+        <div class="carousel-slide">
+          <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 2" />
+        </div>
+        <div class="carousel-slide">
+          <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 3" />
+        </div>
       </div>
-      <div class="carousel-slide">
-        <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 2" />
-      </div>
-      <div class="carousel-slide">
-        <img src="/assets/images/home/classic-hero.jpg" alt="Preview Page 3" />
-      </div>
-      
-      <button class="carousel-control-prev">Previous</button>
-      <button class="carousel-control-next">Next</button>
     </div>
   </TextSection>
 </Layout>
+
+
 
