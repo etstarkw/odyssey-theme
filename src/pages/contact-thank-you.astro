@@ -1,0 +1,29 @@
+---
+import { TextSection } from '@components/odyssey-theme';
+import Layout from '../layouts/Page.astro';
+import HeroSection from '../components/sections/heros/HeroSection.astro';
+import { Accordion } from 'webcoreui/astro';
+import "webcoreui/styles";
+
+const seo = {
+	title: 'Thank you | The Morning After Retirement',
+	description: 'Contact thank you',
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Thanks for your message!</h1>
+			<p>
+				We'll get back to you shortly.
+			</p>
+		</div>
+    <picture slot="image-container">
+      <img
+        src="/assets/images/home/classic-hero5.jpg"
+        alt="Astro Odyssee"
+        id="home-hero-image"
+      />
+    </picture>
+	</HeroSection>
