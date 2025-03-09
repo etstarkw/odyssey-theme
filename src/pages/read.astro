@@ -1,5 +1,5 @@
 ---
-import { TextSection } from '@components/odyssey-theme';
+import { TextSection, Container, FeatureCard } from '@components/odyssey-theme';
 import Layout from '../layouts/Page.astro';
 
 const seo = {
@@ -12,6 +12,20 @@ const previewImage = '/social.png'; // Path to the preview image in the public f
 ---
 
 <Layout seo={seo}>
+  <Container>
+		<section class="feature-card__section">
+			<h2><em>The Morning After Retirement: A Graphic Novel</em></h2>
+			<p>
+				Available to download as a PDF or to order in print!
+			</p>
+			<div class="feature-card__grid">
+				<FeatureCard href={pdfPath} title="Download PDF" imgSrc="/assets/images/home/cover-official">
+				</FeatureCard>
+				<FeatureCard href={pdfPath} title="Order a Physical Copy" imgSrc="/assets/images/home/cover-official">
+				</FeatureCard>
+			</div>
+		</section>
+	</Container>
   <TextSection narrow>
     <h1>Download "The Morning After Retirement"</h1>
 
@@ -36,3 +50,19 @@ const previewImage = '/social.png'; // Path to the preview image in the public f
     </a>
   </TextSection>
 </Layout>
+
+<style>
+	.feature-card__section {
+		margin: var(--section-margin) auto;
+	}
+	.feature-card__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--theme-grid-gap);
+	}
+	@media (max-width: 768px) {
+		.feature-card__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
