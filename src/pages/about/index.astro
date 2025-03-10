@@ -1,5 +1,5 @@
 ---
-import { TextSection } from '@components/odyssey-theme';
+import { Container, TextSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
 import HeroSection from '../../components/sections/heros/HeroSection.astro';
 import { Accordion } from 'webcoreui/astro';
@@ -16,28 +16,28 @@ const seo = {
 		<div slot="text-container">
 			<h1>About The Morning After Retirement</h1>
 			<p>
-				Written by John Starkweather and Illustrated by Molly Kessler, <em>The Morning After Retirement</em> is a surreal romp through the Bible. See below for more information about the team and the project.
+				Written by John Starkweather and illustrated by Molly Kessler, <em>The Morning After Retirement: A Graphic Novel</em> presents a surreal romp through the Bible. Check out the FAQs below for more information about the team and the project. And if you have any other questions, reach out to the team via the <a href="https://themorningafterretirement.com/contact/">contact</a> page!
 			</p>
 		</div>
     <picture slot="image-container">
       <img
         src="/assets/images/home/classic-hero.jpg"
-        alt="Astro Odyssee"
+        alt="About The Morning After Retirement"
         id="home-hero-image"
       />
     </picture>
 	</HeroSection>
-  <TextSection narrow>
+  <Container>
     <h1>FAQs</h1>
-  <Accordion items={[{
-    title: 'Who is the target audience?',
-    content: 'Adults and young adults who are exploring their beliefs or grappling with life\'s big questions. This includes non-believers wrestling with the concept of God and believers reconsidering traditional interpretations of scripture.'
-}, {
-    title: 'How should readers approach the text and images?',
-    content: 'The graphic novel has three streams: the spoken words of A and other characters, the illustrations, and the endnotes. Readers can engage with the endnotes for deeper insights at their own pace, either as they read or afterward to catch references and explore themes.'
-}, {
-    title: 'What do you hope readers take away from this?',
-    content: 'A foundation for their beliefs, a willingness to engage with difficult questions, and an understanding of faith as a living, evolving conversation. The goal is to inspire readers to think, reflect, and actively seek how best to live in the present.'
-}]} icon="plus" />
-  </TextSection>
+    <Accordion items={[{
+      title: 'Who is the target audience?',
+      content: 'Adults and young adults who are exploring their beliefs or grappling with life\'s big questions. This includes non-believers wrestling with the concept of God and believers reconsidering traditional interpretations of scripture.'
+  }, {
+      title: 'How should readers approach the text and images?',
+      content: 'The graphic novel has three streams: the spoken words of A and other characters, the illustrations, and the endnotes. Readers can engage with the endnotes for deeper insights at their own pace, either as they read or afterward to catch references and explore themes.'
+  }, {
+      title: 'What do you hope readers take away from this?',
+      content: 'A foundation for their beliefs, a willingness to engage with difficult questions, and an understanding of faith as a living, evolving conversation. The goal is to inspire readers to think, reflect, and actively seek how best to live in the present.'
+  }]} icon="plus" />
+  </Container>
 </Layout>
