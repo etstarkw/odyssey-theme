@@ -11,10 +11,8 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
   style={background && `--footer-bg:${background}; --footer-color:${color}`}
 >
   <Container>
-    <div class="footer-grid__container">
-      <div>
-        <slot name="logo" />
-      </div>
+    <div>
+      <slot name="logo" />
     </div>
     <div class="footer-copyright__container">
       {showPlug && <Plug/>}
