@@ -11,8 +11,10 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
   style={background && `--footer-bg:${background}; --footer-color:${color}`}
 >
   <Container>
-    <div>
-      <slot name="logo" />
+    <div class="footer-grid__container">
+        <div>
+          <slot name="logo" />
+       </div>
     </div>
     <div class="footer-copyright__container">
       {showPlug && <Plug/>}
@@ -26,7 +28,7 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
   footer {
     --footer-bg: var(--theme-primary);
     --footer-color: var(--theme-on-primary);
-    min-height: 40vh;
+    min-height: 20vh;
     background-color: var(--footer-bg);
     color: var(--footer-color);
     border-top-left-radius: var(--theme-shape-radius);
