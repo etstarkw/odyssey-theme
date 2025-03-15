@@ -14,41 +14,15 @@ const previewImage = '/social.png'; // Path to the preview image in the public f
 <Layout seo={seo}>
   <Container>
 		<section class="feature-card__section">
-			<h2><em>The Morning After Retirement: A Graphic Novel</em></h2>
-			<p>
-				Available to download as a PDF or to order in print!
-			</p>
+			<h2>Available Digitally and In Print!</h2>
 			<div class="feature-card__grid">
-				<FeatureCard href={pdfPath} title="Download PDF" imgSrc="/assets/images/home/cover-official">
+				<FeatureCard href={pdfPath} title="Free PDF Download" imgSrc="/assets/images/home/cover-official">
 				</FeatureCard>
 				<FeatureCard href={pdfPath} title="Order a Physical Copy" imgSrc="/assets/images/home/cover-official">
 				</FeatureCard>
 			</div>
 		</section>
 	</Container>
-  <TextSection narrow>
-    <h1>Download "The Morning After Retirement"</h1>
-
-    <p>
-      Download the full PDF of the graphic novel to read offline.
-    </p>
-
-    <!-- Preview Image -->
-    <img 
-      src={previewImage} 
-      alt="Preview of The Morning After Retirement" 
-      style="max-width: 100%; height: auto; margin-bottom: 1.5rem; border: 1px solid #ddd; border-radius: 8px;"
-    />
-
-    <!-- Download Link -->
-    <a 
-      href={pdfPath} 
-      download="the-morning-after-retirement.pdf" 
-      style="display: inline-block; background-color: #0070f3; color: white; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: bold; text-decoration: none; border-radius: 8px; text-align: center;"
-    >
-      Download PDF
-    </a>
-  </TextSection>
 </Layout>
 
 <style>
