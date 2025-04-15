@@ -1,5 +1,5 @@
 ---
-const {href, imgSrc, title} = Astro.props;
+const { href, imgSrc, title, onClick } = Astro.props;
 ---
 
 <style>
@@ -45,7 +45,12 @@ const {href, imgSrc, title} = Astro.props;
 
 
 <div class="feature-card__card">
-  <a class="feature-card__link" href={href} download="the-morning-after-retirement.pdf">
+  <a 
+  class="feature-card__link"
+  href={href}
+  {...(href.endsWith('.pdf') ? { download: 'the-morning-after-retirement.pdf' } : {})}
+  onclick={onClick}
+  />
     <div class="featured-card__content">
       <h3 class="feature-card__title">{title}</h3>
       <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->

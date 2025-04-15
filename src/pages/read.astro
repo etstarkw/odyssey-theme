@@ -8,7 +8,7 @@ const seo = {
 };
 
 const pdfPath = '/graphic-novel.pdf'; // Path to your PDF in the public folder
-const previewImage = '/social.png'; // Path to the preview image in the public folder
+const orderLink = 'https://www.ingramspark.com'; // Replace with your actual order URL
 ---
 
 <Layout seo={seo}>
@@ -16,10 +16,18 @@ const previewImage = '/social.png'; // Path to the preview image in the public f
 		<section class="feature-card__section">
 			<h2>Available Digitally and In Print!</h2>
 			<div class="feature-card__grid">
-				<FeatureCard href={pdfPath} title="Free PDF Download" imgSrc="/assets/images/home/cover-official">
-				</FeatureCard>
-				<FeatureCard href={pdfPath} title="Order a Physical Copy" imgSrc="/assets/images/home/cover-official">
-				</FeatureCard>
+				<FeatureCard 
+          href={pdfPath}
+          title="Free PDF Download"
+          imgSrc="/assets/images/home/cover-official"
+          onClick={`gtag('event', 'download', { event_category: 'Files', event_label: 'graphic-novel.pdf' });`}
+        />
+        <FeatureCard 
+          href={orderLink}
+          title="Order a Physical Copy"
+          imgSrc="/assets/images/home/cover-official"
+          onClick={`gtag('event', 'click', { event_category: 'Outbound', event_label: 'Order Print Copy' });`}
+        />
 			</div>
 		</section>
 	</Container>
