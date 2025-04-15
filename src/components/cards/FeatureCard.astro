@@ -1,6 +1,11 @@
 ---
 const { href, imgSrc, title, onClick } = Astro.props;
+
+// Determine whether the link should download the file
+const isDownload = href.endsWith('.pdf');
+const isExternal = href.startsWith('http');
 ---
+
 
 <style>
   .feature-card__card {
@@ -48,9 +53,11 @@ const { href, imgSrc, title, onClick } = Astro.props;
   <a 
   class="feature-card__link"
   href={href}
-  {...(href.endsWith('.pdf') ? { download: 'the-morning-after-retirement.pdf' } : {})}
   onclick={onClick}
-  />
+  download={isDownload ? 'the-morning-after-retirement.pdf' : undefined}
+  target={isExternal ? '_blank' : undefined}
+  rel={isExternal ? 'noopener noreferrer' : undefined}
+  >
     <div class="featured-card__content">
       <h3 class="feature-card__title">{title}</h3>
       <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->
