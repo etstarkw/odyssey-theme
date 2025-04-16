@@ -4,7 +4,6 @@ import Layout from '../../layouts/Page.astro';
 import HeroSection from '../../components/sections/heros/HeroSection.astro';
 import { Accordion } from 'webcoreui/astro';
 import "webcoreui/styles";
-import TeamContent from '../../components/TeamContent.astro';
 
 const seo = {
 	title: 'About | The Morning After Retirement',
@@ -32,7 +31,11 @@ const seo = {
      <h1>FAQs</h1>
     <Accordion items={[{
       title: "Who’s the team behind The Morning After Retirement?",
-      content: <TeamContent />
+      content: `John Starkweather, writer: John has been a retired (not in the sense of this story) engineer for the past ten years. He first had the idea for this story about a dozen years ago. His script for the play and now graphic novel has been evolving for about nine years.
+
+Molly Kessler, artist: Molly is a comedy writer, performer, and illustrator. A former cast member at the Second City in Chicago, her work has appeared onstage in theaters across the US and abroad. She is a contributing writer for Reductress and has written for McSweeney’s, Slackjaw, The Belladonna, Humor Darling, and others. She lives in DFW, but also on the internet.
+
+Evan Starkweather, producer: Evan is a writer, performer, and producer based in Chicago. A graduate of The Second City Conservatory and The Annoyance, they originated the role of Jonathan Van Ness in "Queer Eye: The Musical Parody" and their music video "Platonic Gay Best Friend" was featured on Funny or Die. Evan also produces art and community events and teaches yoga. They were uniquely qualified for this project on account of being the author’s child.`
   }, {
       title: 'How should readers approach the text and images?',
       content: 'The graphic novel has three streams: the spoken words of A and other characters, the illustrations, and the endnotes. Readers can engage with the endnotes for deeper insights at their own pace, either as they read or afterward to catch references and explore themes.'
