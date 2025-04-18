@@ -7,8 +7,8 @@ const seo = {
   description: `This is where the pdf of The Morning After Retirement Graphic Novel is available for download as a pdf and to order in print.`,
 };
 
-const pdfPath = '/graphic-novel.pdf'; // Path to your PDF in the public folder
-const orderLink = 'https://www.ingramspark.com'; // Replace with your actual order URL
+const pdfLink = 'https://github.com/etstarkw/odyssey-theme/releases/download/v1.0.0/The-Morning-After-Retirment-Digital.pdf';
+const orderLink = 'https://shop.ingramspark.com/b/084?params=sDdO0mU2nvDG4RLROqoDqI7jb95tjWU0UommvpmeMJx';
 ---
 
 <Layout seo={seo}>
@@ -18,7 +18,7 @@ const orderLink = 'https://www.ingramspark.com'; // Replace with your actual ord
       <p><em>The Morning After Retirement</em> is a passion project. The intention here is not to make money, but rather to share a message. That’s why the digital version of the graphic novel is available for free and the physical version is being sold at the price of printing and shipping. If you wish to support this project, we encourage you to pay it forward by sharing <em>The Morning After Retirement</em> with anyone who may be interested. Thank you!</p>
 			<div class="feature-card__grid">
 				<FeatureCard 
-          href={pdfPath}
+          href={pdfLink}
           title="Free PDF Download"
           imgSrc="/assets/images/home/cover-official"
           onClick={`gtag('event', 'download', { event_category: 'Files', event_label: 'graphic-novel.pdf' });`}
